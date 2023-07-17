@@ -1,0 +1,9 @@
+.footer {
+    text-align: center;
+    background-color: mintcream;
+}
+
+.footer__copy {
+    font-size: 1.5rem;
+    color: mediumseagreen;
+}
