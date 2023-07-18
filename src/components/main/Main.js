@@ -28,30 +28,23 @@ const beastArr = [{
     "horns": 1
 }]
 
-function renderBeast(arr){
-  arr.forEach((item, index)=>{
-    console.log(item);
-    return (<HornedBeast title={item.title} image_url={item.image_url} keyword={item.keyword} description={item.description}/>)
-  })
-}
+// function renderBeast(arr){
+//   arr.forEach((item, index)=>{
+//     console.log(item);
+//     return (<HornedBeast title={item.title} image_url={item.image_url} keyword={item.keyword} description={item.description}/>)
+//   })
+// }
 
 
 export default function Main() {
   return (
     <div className='main'>
       { 
-      beastArr.forEach((item, index)=>{
-        console.log(item);
-        return <HornedBeast title={item.title} image_url={item.image_url} keyword={item.keyword} description={item.description}/>;
-  })
-  }
+      beastArr.map((item, index)=>
+       <HornedBeast title={item.title} image_url={item.image_url} keyword={item.keyword} description={item.description} key={index}/>)
+      }
 
-{/*       
-    <HornedBeast title={beastArr[0].title} image_url={beastArr[0].image_url} keyword={beastArr[0].keyword} description={beastArr[0].description}/>;
-    <HornedBeast title={beastArr[1].title} image_url={beastArr[1].image_url} keyword={beastArr[1].keyword} description={beastArr[1].description}/>;
-    <HornedBeast title={beastArr[2].title} image_url={beastArr[2].image_url} keyword={beastArr[2].keyword} description={beastArr[2].description}/>; */}
 
-      
     </div>
   )
 }
