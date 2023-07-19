@@ -8,7 +8,7 @@ export default function HornedBeast({title, image_url, keyword, description}) {
   const [count, setCount] = useState(0);
 
   function increaseCount() {
-    setCount(count+1);
+    setCount(prevCount => prevCount + 1);
   }
 
   return (
